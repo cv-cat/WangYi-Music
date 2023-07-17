@@ -43,7 +43,7 @@ def download_video(id):
     name, url = get_video_url(id)
     content = requests.get(url).content
     print(f"{name}开始下载")
-    with open(f"./songs/{name}.mp4", mode="wb") as f:
+    with open(f"./songs/{name}.mp3", mode="wb") as f:
         f.write(content)
         print(f"{name}下载完成")
 
@@ -51,8 +51,7 @@ def download_video(id):
 
 def main():
     url_list = [
-        'https://music.163.com/#/song?id=2061887794',
-        'https://music.163.com/#/song?id=2061888566'
+        'https://music.163.com/#/song?id=518682659',
     ]
     id_list = []
     for url in url_list:
